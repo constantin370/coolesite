@@ -7,23 +7,25 @@
     </div>
   </div>
   {% if messages %}
-    <div class="card col-4 m-3">
-      <div class="card-body">
-        {% for message in messages %}
-          {% if message.tags == 'info'%}
-            <div class="alert alert-info" role="alert">
-              {{ message }}
-            </div>
-          {% elif message.tags == 'success'%}
-            <div class="alert alert-success" role="alert">
-              {{ message }}
-            </div>
-          {% else %}
-            <div class="alert alert-warning" role="alert">
-              {{ message }}
-            </div>
-          {% endif %}
-        {% endfor %}
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="card col-4 m-3">
+        <div class="card-body">
+          {% for message in messages %}
+            {% if message.tags == 'info'%}
+              <div class="alert alert-info" role="alert">
+                {{ message }}
+              </div>
+            {% elif message.tags == 'success'%}
+              <div class="alert alert-success" role="alert">
+                {{ message }}
+              </div>
+            {% else %}
+              <div class="alert alert-warning" role="alert">
+                {{ message }}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   {% endif %}
