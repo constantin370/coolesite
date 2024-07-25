@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style_sheets.css'%}" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/fvg/favicon.ico' %}" type="image">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+              crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+  </head>  
+  <body>
+
+    {% include "includes/header.html" %}
+
+    <div class="container mt-4">
+      {% block content %}{% endblock %}
+    
+    </div>
+
+    <main>
+    </main>
+
+    {% include "includes/footer.html" %}
+
+  </body>
+</html>

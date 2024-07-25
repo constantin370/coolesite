@@ -1,0 +1,21 @@
+<ul class="dropdown-menu">
+
+    {% if request.user.is_staff %}
+      <li class="nav-item dropdown">
+        <a class="dropdown-item" href="#">Менеджер</a>
+      </li>
+    {% endif %}
+    
+      <li>
+        <a class="dropdown-item" href="{% url 'password_reset' %}">Сброс пароля</a>
+      </li>
+  
+      <li>
+        <a class="dropdown-item" href="{% url 'password_change' %}">Изменить пароль</a>
+      </li>
+  
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
+      </li>
+      
+  </ul>

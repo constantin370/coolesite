@@ -1,0 +1,48 @@
+span.asteriskField{
+    color: red;
+}
+
+a.nav-link {
+    font-family:Times; 
+    font-style: italic;
+    color:black; 
+    font-size:18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nasiholog {
+    font-family:Times; 
+    font-style: normal; 
+    color:blue;
+    font-size:18px;
+}
+
+.headline1 {
+    font-family:Times; 
+    font-style: italic;
+    color:black; 
+    font-size:18px;  
+}
+
+.headline2 {
+    font-family:Times; 
+    color:blue; 
+    font-size:25px;
+}
+
+.headline3 {
+    font-family:Times; 
+    font-style:italic; 
+    color:black; 
+    font-size:21px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.headline4 {
+    font-family:Times;
+    font-weight: bold;
+    color:black;
+    font-size:35px
+}
+

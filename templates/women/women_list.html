@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+  <div class="center-screen">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+
+      {% for post_elem in page_obj %}
+        <div class="col p-4 d-flex flex-column position-static">
+          <div class="text-center">
+            <h2 class="headline4">{{post_elem.title}}</h2>
+              <p class="text-center">
+                <a style="text-decoration: none;" href="{{post_elem.cat.get_absolute_url}}"
+                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                      target="_blank">
+                <span class="nasiholog">Категории: {{post_elem.cat}} </span></a>
+              </p>
+          </div>
+
+          {% if post_elem.photo %}
+            <p>
+              <img class="rounded mx-auto d-block" src="{{post_elem.photo.url}}" height="350" alt="dots icon">
+            </p>
+          {% endif %}
+          
+          
+          <div class="card-body">
+            <div class="headline1">
+              {% autoescape on %}
+                <p class="card-text">{{post_elem.content|linebreaks|truncatewords:30}}</p>
+              {% endautoescape %}
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button class="btn btn-light rounded-pill px-3" type="button">
+              <a style="text-decoration: none;" href="{{post_elem.get_absolute_url}}"
+                  class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                  <span class="headline2">Читать пост</span>
+                </a>
+            </button>
+          </div>
+
+          <div class="headline1">
+            <small class="text-body-secondary">
+              <p class="card-text">
+                Дата редактирования: {{post_elem.time_update|date:"d-m-Y H:i:s"}}
+              </p>
+            </small>
+        </div>
+
+        </div>
+
+      {% endfor %}
+        
+    </div>
+  </div>
+  {% include "includes/paginator.html" %}
+</div>
+
+{% endblock %}
