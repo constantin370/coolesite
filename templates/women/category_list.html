@@ -8,12 +8,14 @@
         
         {% for post_elem in page_obj %}
           <div class="col p-4 d-flex flex-column position-static">
-            <h2 class="text-center">{{post_elem.title}}</h2>
+            <h2 class="headline4 text-center">{{post_elem.title}}</h2>
               <p class="text-center">
-                <a href="{{post_elem.cat.get_absolute_url}}"
-                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Категории: {{post_elem.cat}}</a>
+                <a style="text-decoration: none;" href="{{post_elem.cat.get_absolute_url}}"
+                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                    <span class="nasiholog">Категории: {{post_elem.cat}}</span>
+                  </a>
               </p>
-
+      
             {% if post_elem.photo%}
               <p><img class="rounded mx-auto d-block" src="{{post_elem.photo.url}}" height="350" alt="dots icon"></p>
             {% endif %}
@@ -26,8 +28,10 @@
 
             <div class="btn-group">
               <button class="btn btn-light rounded-pill px-3" type="button">
-                <a href="{{post_elem.get_absolute_url}}"
-                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Читать пост</a>
+                <a style="text-decoration: none;" href="{{post_elem.get_absolute_url}}"
+                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                    <span class="headline2">Читать пост</span>
+                </a>
               </button>
             </div>
             <small class="text-body-secondary">Дата редактирования: {{post_elem.time_update|date:"d-m-Y H:i:s"}}</small>

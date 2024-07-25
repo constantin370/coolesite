@@ -1,5 +1,4 @@
 from django.shortcuts import get_list_or_404
-
 from women.models.women_model import Women
 from women.utils import paginator
 

@@ -3,9 +3,6 @@ from women.models.women_model import Women
 from women.utils import paginator
 
 
-# Create your views here.
-
-
 def women_list_view(request):
     """Функция отображения всех опубликованных статей."""
     templates = 'women/women_list.html'

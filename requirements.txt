@@ -6,7 +6,7 @@ charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
 crispy-bootstrap5==2024.2
-Django==3.2.11
+Django==4.2.11
 django-crispy-forms==2.1
 Flask==3.0.2
 idna==3.6
